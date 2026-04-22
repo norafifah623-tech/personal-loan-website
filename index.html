@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nur Syamila Bantuan Kewangan</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5;}
+    header {background:#0a2540; color:white; padding:20px; text-align:center;}
+    .container {padding:20px;}
+    .card {background:white; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-bottom:20px;}
+    h2 {color:#0a2540;}
+    input, select {width:100%; padding:10px; margin:10px 0; border-radius:8px; border:1px solid #ccc;}
+    button {background:#0a2540; color:white; padding:12px; border:none; border-radius:8px; width:100%; font-size:16px; cursor:pointer;}
+    button:hover {background:#163d6b;}
+    footer {text-align:center; padding:15px; background:#0a2540; color:white;}
+  </style>
+</head>
+<body><header>
+  <h1>Nur Syamila Bantuan Kewangan</h1>
+  <p>Pinjaman Peribadi Mudah & Cepat</p>
+</header><div class="container">  <div class="card">
+    <h2>Kelebihan</h2>
+    <ul>
+      <li>Lulus cepat 10 minit</li>
+      <li>Tanpa penjamin</li>
+      <li>Proses mudah hanya IC</li>
+      <li>Bayaran fleksibel</li>
+    </ul>
+  </div>  <div class="card">
+    <h2>Borang Permohonan</h2>
+    <form onsubmit="hantarWhatsApp(); return false;">
+      <input type="text" id="nama" placeholder="Nama Penuh" required>
+      <input type="text" id="ic" placeholder="No IC" required>
+      <input type="number" id="jumlah" placeholder="Jumlah Pinjaman (RM)" required>
+      <select id="tempoh">
+        <option value="1 tahun">1 Tahun</option>
+        <option value="3 tahun">3 Tahun</option>
+        <option value="5 tahun">5 Tahun</option>
+        <option value="10 tahun">10 Tahun</option>
+      </select>
+      <button type="submit">Mohon Sekarang</button>
+    </form>
+  </div></div><footer>
+  <p>© 2026 Nur Syamila Bantuan Kewangan</p>
+</footer><script>
+function hantarWhatsApp(){
+  var nama = document.getElementById('nama').value;
+  var ic = document.getElementById('ic').value;
+  var jumlah = document.getElementById('jumlah').value;
+  var tempoh = document.getElementById('tempoh').value;
+
+  var mesej = `Permohonan Loan:%0A
+Nama: ${nama}%0AIC: ${ic}%0AJumlah: RM${jumlah}%0ATempoh: ${tempoh}`;
+
+  var no = "60123456789"; // GANTI NO WHATSAPP ANDA
+  window.open(`https://wa.me/${no}?text=${mesej}`, '_blank');
+}
+</script></body>
+</html>
